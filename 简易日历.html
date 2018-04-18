@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易日历</title>
+</head>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+    .calendar{
+        width: 280px;
+        background: #ccc;
+        margin: 100px auto;
+        border: 1px solid black;
+        padding: 20px 20px;
+    }
+    .calendar ul{
+        width: 270px;
+        overflow: hidden;
+    }
+    .calendar li{
+        width: 78px;
+        height: 72px;
+        list-style:none;
+        float:left;
+        margin: 10px 5px 0 5px;
+        background: #fff;
+        border: 1px solid black;
+    }
+    .calendar .active{
+        background: #000;
+        border: 1px solid pink;
+        color: #fff;
+    }
+    .text{
+        width: 240px;
+        
+    }
+</style>
+<script>
+    window.onload=function(){
+        var oDiv= document.getElementById('tab');
+        var oTxt= oDiv.getElementsByTagName('div')[0];
+        var aLi=oDiv.getElementsByTagName('li');
+        var arr=[
+            '我是谁','我在哪','我在打谁','谁在打我','我从哪来','我要到哪去','我在想什么','什么在想我','想这么多干什么','漂亮就得了','漂亮也没用','没用也漂亮'
+        ];
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].index=i;
+            aLi[i].onmouseover=function(){
+                for(var i=0;i<aLi.length;i++){
+                    aLi[i].className='';
+                }
+                this.className='active';
+                oTxt.innerHTML="<h2>第"+(this.index+1)+"个月</h2><p>"+arr[this.index]+"</p>";
+            }
+        }
+    };
+</script>
+<body>
+<div id="tab" class="calendar">
+    <ul>
+        <li class="active"><h2>1</h2><p>Jan</p></li>
+        <li><h2>2</h2><p>Fer</p></li>
+        <li><h2>3</h2><p>Mar</p></li>
+        <li><h2>4</h2><p>Apr</p></li>
+        <li><h2>5</h2><p>May</p></li>
+        <li><h2>6</h2><p>Jun</p></li>
+        <li><h2>7</h2><p>Jul</p></li>
+        <li><h2>8</h2><p>Aug</p></li>
+        <li><h2>9</h2><p>Sep</p></li>
+        <li><h2>10</h2><p>Oct</p></li>
+        <li><h2>11</h2><p>Nov</p></li>
+        <li><h2>12</h2><p>Dec</p></li>
+    </ul>
+    <div class="text"></div>
+</div>
+</body>
+</html>

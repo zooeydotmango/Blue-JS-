@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            /*没有绝对定位无法通过控制left进行滚动 */
+            left:0;
+            top: 50px;
+        }
+    </style>
+    <script>
+        setInterval(function(){
+            var oDiv=document.getElementById('div1');
+            //alert(oDiv.style.left);
+            oDiv.style.left =oDiv.offsetLeft+10+'px';
+        },30);
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

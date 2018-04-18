@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link id="l1" rel="stylesheet" type="text/css" href="" />
+    <script>
+        function skin1(){
+            var oL=document.getElementById('l1');
+            oL.href="css1.css";
+        }
+        function skin2(){
+            var oL=document.getElementById('l1');
+            oL.href="css2.css";
+        }
+        function setText(){
+           var oTxt= document.getElementById('text1');
+           oTxt.value='abce';
+        }
+    </script>
+</head>
+<body>
+<input type="botton" value="皮肤1" onclick="">
+<input type="botton" value="皮肤2" onclick="">
+<input type="text" id="text1">
+<input type="button" value="改文字" onclick=setText()>
+</body>
+</html>

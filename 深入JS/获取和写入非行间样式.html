@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var oDiv= document.getElementById('div1');
+            //alert(oDiv.style.width); 无法取得行间样式
+            setStyle(oDiv,'width','300px');
+        }
+        //获取非行间样式
+        function getStyle(obj,attr){
+            if(obj.currentStyle){
+                return obj.currentStyle[attr];
+            }else{
+                return getComputedStyle(obj,false)[attr];
+            }
+        }
+        //写入非行间样式
+        function setStyle(obj,attr,value){
+            if(arguments.length ==2){return getStyle(obj,attr);}
+            else{
+                obj.style[attr] = value;
+            }
+        }
+    </script>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

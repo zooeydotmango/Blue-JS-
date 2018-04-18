@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #000;
+            color: #fff;
+            font-size: 50px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aImg=document.getElementsByTagName('img');
+         //   runClock();
+            function runClock(){
+                var oDate=new Date();
+                var str=toString(oDate.getFullYear())+toString(oDate.getMonth()+1)+toString(oDate.getDate());
+                str +=toString(oDate.getHours())+toString(oDate.getMinutes())+toString(oDate.getSeconds());
+                for(var i=0;i<aImg.length;i++){
+                    aImg[i].src='../img/1x/资源 '+str[i]+'.png';//IE7下需要使用str.charAt(0)
+                }
+            }
+            setInterval(runClock,1000);
+            runClock();
+        };
+        function toString(n){
+            if(n<10){
+                return '0'+n;
+            }else{
+                return ''+n;
+            }
+        }
+    </script>
+</head>
+<body>
+<img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">年
+<img src="" alt=""><img src="" alt="">月
+<img src="" alt=""><img src="" alt="">日
+<br/>
+<img src="../img/1x/资源 1.png" alt=""><img src="../img/1x/资源 1.png" alt="">
+:
+<img src="../img/1x/资源 1.png" alt=""><img src="../img/1x/资源 1.png" alt="">
+:
+<img src="../img/1x/资源 1.png" alt=""><img src="../img/1x/资源 1.png" alt="">
+</body>
+</html>

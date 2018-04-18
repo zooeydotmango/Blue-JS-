@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+            var oUl=document.getElementById('ul1');
+            //创建文档碎片
+            var oFrag = document.createDocumentFragment();
+            for(var i =0;i<1000;i++){
+                var oLi=document.createElement('li');
+                //每次暂时连在oFrag
+                oFrag.appendChild(oLi);
+            }
+            //最后一次连进父节点，对低级浏览器的简单优化，使用较少
+            oUl.appendChild(oFrag);
+        }
+    </script>
+</head>
+<body>
+<ul id="ul1"></ul>
+</body>
+</html>

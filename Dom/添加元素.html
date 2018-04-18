@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var oBtn = document.getElementById('btn1');
+            var oUl = document.getElementById('ul1');
+            var oTxt = document.getElementById('text1');
+            oBtn.onclick=function(){
+                var oLi = document.createElement('li');
+                //input表单没有</input>标签，innerHTML是标签之间的内容，因此input应该使用value
+                oLi.innerHTML = oTxt.value;
+                oUl.appendChild(oLi);//添加到末尾
+                //如何将最新的内容排在最上面：insertBefore
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="text1" type="text">
+<input id="btn1" type="button" value="创建li">
+<ul id="ul1"></ul>
+</body>
+</html>

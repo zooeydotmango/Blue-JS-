@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var oTab = document.getElementById('tab1');
+            var oldColor ='';
+            //想要获得名称2原生写法
+            //alert(oTab.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1].getElementsByTagName('td')[1].innerHTML);
+            //表格的写法tBodies,tHead,tFoot,rows,cells
+            //alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+            for(var i=0;i<oTab.tBodies[0].rows.length;i++){
+                if(i%2){
+                    oTab.tBodies[0].rows[i].style.background='red';
+                }else{
+                    oTab.tBodies[0].rows[i].style.background='';
+                }
+                oTab.tBodies[0].rows[i].onmouseover = function(){
+                    oldColor = this.style.background;
+                    this.style.background='green';
+                };
+                //会覆盖隔行变色的效果,需要odlColor做变量保存之前的颜色
+                oTab.tBodies[0].rows[i].onmouseout = function(){
+                    this.style.background=oldColor;
+                };
+            }
+
+            //表格的添加、删除
+            var oName=document.getElementById('name');
+            var oAge=document.getElementById('age');
+            var oBtn=document.getElementById('btn1');
+            var id=oTab.tBodies[0].rows.length+1;
+            oBtn.onclick = function(){
+                //使用dom的方式添加元素
+                var oTr=document.createElement('tr');
+                oTab.tBodies[0].appendChild(oTr);
+
+                var oTd=document.createElement('td');
+                oTd.innerHTML = id++;
+                oTr.appendChild(oTd);
+                var oTd=document.createElement('td');
+                oTd.innerHTML = oName.value;
+                oTr.appendChild(oTd);
+                var oTd=document.createElement('td');
+                oTd.innerHTML = oAge.value;
+                oTr.appendChild(oTd);
+                var oTd=document.createElement('td');
+                oTd.innerHTML = '<a href="javascript:;">删除</a>';
+                oTr.appendChild(oTd);
+                oTd.getElementsByTagName('a')[0].onclick = function(){oTab.tBodies[0].removeChild(this.parentNode.parentNode);}
+            }
+        }
+    </script>
+</head>
+<body>
+姓名：<input id="name" type="text">
+年龄：<input id="age" type="text">
+<input id="btn1" type="button" value="添加">
+<table id="tab1" border="1" width="200px">
+    <thead>
+    <td>ID</td>
+    <td>名称</td>
+    <td>年龄</td>
+    <td>操作</td>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>名称1</td>
+        <td>年龄1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>名称2</td>
+        <td>年龄2</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>名称3</td>
+        <td>年龄3</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>名称4</td>
+        <td>年龄4</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

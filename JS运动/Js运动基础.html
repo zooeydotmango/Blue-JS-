@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 200px;
+			height: 200px;
+			background-color: #B6FF00FF;
+			position: absolute;
+			top: 50px;
+			left: 0px;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			var oBtn = document.getElementById('btn1');
+			var oDiv = document.getElementById('div1');
+			var timer;
+			oBtn.onclick = function() {
+				//保证每次只有一个定时器在工作
+				var speed = 1;
+				clearInterval(timer);
+				timer = setInterval(function() {
+					// offsetLeft的使用
+					if (oDiv.offsetLeft >= 300) {
+						clearInterval(timer);
+					} else {
+						oDiv.style.left = oDiv.offsetLeft + speed + 'px';
+						// 使用变量存储速度
+					}
+				}, 30);
+
+
+			};
+		};
+	</script>
+</head>
+<body>
+	<input type="button" value='开始运动' id='btn1'>
+	<div id="div1"></div>
+</body>
+</html>
