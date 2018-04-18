@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匀速运动的终止条件</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: darkcyan;
+            position: absolute;
+            left: 600px;
+            top: 50px;
+        }
+        #div2{
+            width: 1px;
+            height: 200px;
+            position: absolute;
+            left: 100px;
+            background: #000;
+        }#div3{
+             width: 1px;
+             height: 200px;
+             position: absolute;
+             left: 300px;
+             background: #000;
+         }
+    </style>
+    <script>
+        var timer=null;
+        function startMove(iTarget) {
+            var oDiv=document.getElementById('div1');
+            clearInterval(timer);
+            timer=setInterval(function () {
+
+                //匀速
+                //当距离小于一次速度，停止计时器直接设置位置
+                var speed=0;
+                if(oDiv.offsetLeft<iTarget){
+                    speed=7;
+                }else{
+                    speed=-7;
+                }
+                if (Math.abs(oDiv.offsetLeft-iTarget)<=7){
+                    clearInterval(timer);
+                    oDiv.style.left=iTarget+'px';
+                }else{
+                    oDiv.style.left = oDiv.offsetLeft + speed + 'px';
+                }
+
+            },30);
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="到100" onclick="startMove(100)">
+<input id="btn2" type="button" value="到300" onclick="startMove(300)">
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+</body>
+</html>
