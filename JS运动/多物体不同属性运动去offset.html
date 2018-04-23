@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多物体不同属性运动</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background: yellow;
+            float: left;
+        }
+        #div4{
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+            opacity: 0.2;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var oDiv1=document.getElementById('div1');
+            oDiv1.onmouseover=function () {
+                startMove2(this,'width',400);
+            };
+            oDiv1.onmouseout=function () {
+                startMove2(this,'width',200);
+            };
+            var oDiv2=document.getElementById('div2');
+            oDiv2.onmouseover=function () {
+                startMove2(this,'height',400);
+            };
+            oDiv2.onmouseout=function () {
+                startMove2(this,'height',200);
+            };
+            var oDiv3=document.getElementById('div3');
+            oDiv3.onmouseover=function () {
+                startMove2(this,'fontSize',40);
+            };
+            oDiv3.onmouseout=function () {
+                startMove2(this,'fontSize',20);
+            };
+            var oDiv4=document.getElementById('div4');
+            oDiv4.onmouseover=function () {
+                startMove2(this,'opacity',100);
+            };
+            oDiv4.onmouseout=function () {
+                startMove2(this,'opacity',20);
+            };
+        }
+        function getStyle(obj,name) {
+            if(obj.currentStyle){
+                return obj.currentStyle[name];
+            }else {
+                //注意obj.currentStyle[attr]和getComputedStyle(obj,false)[attr]
+                return getComputedStyle(obj,false)[name];
+            }
+        }
+        //获取样式会把数字取整，设置样式时会加px,对透明度不兼容
+        function startMove(obj,attr, iTarget) {
+            clearInterval(obj.timer);
+            //offset带有border会有bug，使用getStyle代替
+            obj.timer = setInterval(function () {
+                var cur=parseInt(getStyle(obj, attr));
+                var speed = (iTarget-cur)/6;
+                speed=speed>0?Math.ceil(speed):Math.floor(speed);
+                if(cur == iTarget){
+                    clearInterval(obj.timer);
+                }else{
+                    obj.style[attr] = cur+speed+'px';
+                }
+            }, 30);
+        }
+        //兼容透明度设置
+        function startMove2(obj,attr, iTarget) {
+            clearInterval(obj.timer);
+            //offset带有border会有bug，使用getStyle代替
+            obj.timer = setInterval(function () {
+                var cur=0;
+                //加判断
+                if(attr == 'opacity'){
+                    cur=parseFloat(getStyle(obj,attr))*100;
+                }else{
+                    cur=parseInt(getStyle(obj,attr));
+                }
+// console.log(cur);
+                var speed = (iTarget-cur)/6;
+                speed=speed>0?Math.ceil(speed):Math.floor(speed);
+                if(cur == iTarget){
+                    clearInterval(obj.timer);
+                }else{
+                    //加判断
+                    if (attr =='opacity'){
+                        obj.style.filter='alpha(opacity:'+cur+speed+')';
+                        obj.style.opacity=(cur + speed)/100;
+                    }
+                    else {
+                        obj.style[attr] = cur+speed+'px';
+                    }
+                }
+            }, 30);
+        }
+    </script>
+</head>
+<body>
+<div id="div1">变宽</div>
+<div id="div2">变高</div>
+<div id="div3">字符</div>
+<div id="div4">透明度</div>
+</body>
+</html>

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fb766bf-1dbc-4968-b1d6-73fa91b4d54d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JS运动/多物体淡入淡出.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS运动/多物体运动.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS运动/多物体运动.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,17 +20,26 @@
       <file leaf-file-name="多物体运动.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JS运动/多物体运动.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="594">
+              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="33" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="多物体淡入淡出.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="多物体淡入淡出.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JS运动/多物体淡入淡出.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+            <state relative-caret-position="198">
+              <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="多物体不同属性运动去offset.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -90,6 +98,8 @@
         <option value="$PROJECT_DIR$/JS运动/匀速运动的终止条件.html" />
         <option value="$PROJECT_DIR$/JS运动/多物体运动.html" />
         <option value="$PROJECT_DIR$/JS运动/多物体淡入淡出.html" />
+        <option value="$PROJECT_DIR$/JS运动/多物体不同属性运动.html" />
+        <option value="$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html" />
       </list>
     </option>
   </component>
@@ -191,7 +201,7 @@
       <workItem from="1524066210419" duration="8500000" />
       <workItem from="1524145852126" duration="1341000" />
       <workItem from="1524398562096" duration="3444000" />
-      <workItem from="1524488332522" duration="3963000" />
+      <workItem from="1524488332522" duration="6697000" />
     </task>
     <task id="LOCAL-00001" summary="运动模式">
       <created>1524069917371</created>
@@ -214,11 +224,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524398614347</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="多物体">
+      <created>1524504234819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524504234820</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74213000" />
+    <option name="totallyTimeSpent" value="76947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="843" y="0" width="1082" height="1047" extended-state="0" />
@@ -297,7 +314,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="匀速运动和缓冲运动" />
     <MESSAGE value="运动模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="运动模式" />
+    <MESSAGE value="多物体" />
+    <option name="LAST_COMMIT_MESSAGE" value="多物体" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -309,16 +327,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JS运动/右侧悬浮框.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS运动/匀速运动的终止条件.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
@@ -654,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS运动/多物体运动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS运动/淡入淡出效果.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -670,8 +671,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JS运动/多物体淡入淡出.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+        <state relative-caret-position="198">
+          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS运动/多物体运动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
         </state>
       </provider>
     </entry>
