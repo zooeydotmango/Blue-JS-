@@ -79,11 +79,12 @@
                 var cur=0;
                 //加判断
                 if(attr == 'opacity'){
-                    cur=parseFloat(getStyle(obj,attr))*100;
+                    //计算数尾数太多，Math.round取整
+                    cur=Math.round(parseFloat(getStyle(obj, attr)) * 100);
                 }else{
                     cur=parseInt(getStyle(obj,attr));
                 }
-// console.log(cur);
+
                 var speed = (iTarget-cur)/6;
                 speed=speed>0?Math.ceil(speed):Math.floor(speed);
                 if(cur == iTarget){

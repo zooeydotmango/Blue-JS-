@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fb766bf-1dbc-4968-b1d6-73fa91b4d54d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="多物体不同属性运动去offset.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+            <state relative-caret-position="396">
+              <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -201,7 +201,7 @@
       <workItem from="1524066210419" duration="8500000" />
       <workItem from="1524145852126" duration="1341000" />
       <workItem from="1524398562096" duration="3444000" />
-      <workItem from="1524488332522" duration="6697000" />
+      <workItem from="1524488332522" duration="7246000" />
     </task>
     <task id="LOCAL-00001" summary="运动模式">
       <created>1524069917371</created>
@@ -231,17 +231,24 @@
       <option name="project" value="LOCAL" />
       <updated>1524504234820</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="多物体">
+      <created>1524506943514</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1524506943514</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76947000" />
+    <option name="totallyTimeSpent" value="77496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="843" y="0" width="1082" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22318007" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22318007" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5019157" side_tool="true" weight="0.32929516" />
@@ -685,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JS运动/多物体不同属性运动去offset.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        <state relative-caret-position="396">
+          <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
         </state>
       </provider>
     </entry>
